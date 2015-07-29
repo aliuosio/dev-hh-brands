@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <!-- Standard -->
+    <default>
+        <reference name="footer">
+            <block type="devhh_brands/list" name="brands.list" as="brandsList" template="devhh-brands/list.phtml"/>
+        </reference>
+    </default>
+
+    <devhh_brands_index_index>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>sm/shopby/css/style.css</name>
+            </action>
+        </reference>
+        <reference name="left">
+            <block type="devhh_brands/layer_view" name="catalog.leftnav" after="currency" template="sm/shopby/catalog/layer/view.phtml"/>
+            <block type="basicproducts/home" name="default.basicproducts.list1" after="catalog.leftnav" template="sm/basicproducts/home.phtml"/>
+        </reference>
+        <reference name="content">
+            <block type="devhh_brands/brandname" name="products_brandname"/>
+            <block type="devhh_brands/products" name="brand_products" template="sm/shopby/catalog/product/list.phtml">
+                <action method="setColumnCount"><columns>3</columns></action>
+                <block type="catalog/product_list_toolbar" name="product_list_toolbar" template="catalog/product/list/toolbar.phtml">
+                    <block type="page/html_pager" name="product_list_toolbar_pager"/>
+                    <!-- The following code shows how to set your own pager increments -->
+                    <!--
+                        <action method="setDefaultListPerPage"><limit>4</limit></action>
+                        <action method="setDefaultGridPerPage"><limit>3</limit></action>
+                    <action method="addPagerLimit"><mode>grid</mode><limit>12</limit></action>
+                        <action method="addPagerLimit"><mode>list</mode><limit>4</limit></action>
+                        <action method="addPagerLimit"><mode>list</mode><limit>6</limit></action>
+                        <action method="addPagerLimit"><mode>list</mode><limit>8</limit></action>
+                        <action method="addPagerLimit" translate="label"><mode>list</mode><limit>all</limit><label>All</label></action>
+                        <action method="addPagerLimit"><mode>grid</mode><limit>3</limit></action>
+                        <action method="addPagerLimit"><mode>grid</mode><limit>6</limit></action>
+                        <action method="addPagerLimit"><mode>grid</mode><limit>9</limit></action>
+                        <action method="addPagerLimit" translate="label"><mode>grid</mode><limit>all</limit><label>All</label></action>
+                    -->
+                </block>
+                <action method="addColumnCountLayoutDepend"><layout>empty</layout><count>6</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>one_column</layout><count>5</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>two_columns_left</layout><count>4</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>two_columns_right</layout><count>4</count></action>
+                <action method="addColumnCountLayoutDepend"><layout>three_columns</layout><count>3</count></action>
+                <action method="setToolbarBlockName"><name>product_list_toolbar</name></action>
+            </block>
+        </reference>
+    </devhh_brands_index_index>
+
+</layout>

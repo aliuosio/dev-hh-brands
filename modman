@@ -1,0 +1,4 @@
+app/code/local/Devhh/Brands                                 app/code/local/Devhh/Brands
+app/etc/modules/Devhh_Brands.xml                            app/etc/modules/Devhh_Brands.xml
+app/design/frontend/base/default/template/devhh-brands      app/design/frontend/base/default/template/devhh-brands
+app/design/frontend/base/default/layout/devhh_brands.xml    app/design/frontend/base/default/layout/devhh_brands.xml

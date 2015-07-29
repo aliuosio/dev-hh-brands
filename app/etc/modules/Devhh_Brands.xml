@@ -1,0 +1,12 @@
+<config>
+    <modules>
+        <Devhh_Brands>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Catalog/>
+                <Sm_Shopby/>
+            </depends>
+        </Devhh_Brands>
+    </modules>
+</config>

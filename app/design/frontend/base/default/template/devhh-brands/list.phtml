@@ -1,0 +1,14 @@
+<div class="block block-cs col-lg-3 col-md-3 col-sm-3 col-xs-12">
+    <article>
+        <header>
+            <div class="block-title">
+                <span>Hersteller</span>
+            </div>
+        </header>
+        <div class="block-content footerBrandLinks">
+            <?php foreach ($this->getBrandsList() as $brand): ?>
+                <a href="/hersteller/<?php echo urlencode($brand); ?>.html"><?php echo $brand; ?></a>
+            <?php endforeach; ?>
+        </div>
+    </article>
+</div>
